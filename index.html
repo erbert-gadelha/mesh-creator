@@ -25,12 +25,28 @@
             </svg>
 
         </div>
-        <div id="options">
-            <label for="fileInput" class="btn load">load</label>
-            <input type="file" id="fileInput" class="hidden-file-input" accept=".svg">
-            <button id="btn-save" class="btn save">
-                save
-            </button>
+
+        <div id="sidebar">
+            <div id="options">
+                <label for="fileInput" class="btn load">load</label>
+                <input type="file" id="fileInput" class="hidden-file-input" accept=".svg">
+                <button id="btn-save" class="btn save">
+                    save
+                </button>
+            </div>
+
+            
+            <div id="demostrations">
+                <button id="btn-dog" class="btn" onclick="FetchFor('cachorro')">
+                    cachorro
+                </button>
+                <button id="btn-star" class="btn" onclick="FetchFor('estrela')">
+                    estrela
+                </button>
+                <button id="btn-house" class="btn" onclick="FetchFor('casa')">
+                    casa
+                </button>
+            </div>
         </div>
 
 

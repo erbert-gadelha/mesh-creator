@@ -1,3 +1,4 @@
+//import dog from './demostrations/dog.svg';
 
 const box = document.getElementById('box');
 const path =  document.getElementById('path');
@@ -467,3 +468,15 @@ window.addEventListener('keydown', (event) => {
         saveSVG();
     }
 });
+
+
+function FetchFor(param) {
+    fetch(`demostrations/${param}.svg`)
+    .then(response => response.text())
+    .then(svgData => {
+        refreshSVG(svgData);
+    })
+    .catch(error => {
+        console.error('Erro ao carregar o SVG:', error);
+    });
+}
