@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+*{
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+  --deep-grey: #363636;
+  --dot: #44f83e;
+  --grey: #444444;
+  --blue: #1B77F3;
+  --dot-size: 6px;
+}
+
+
+body {
+  background-color: var(--grey);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: visible;
+}
+
+#box {
+  background-color: var(--deep-grey);
+  /*outline: solid 5px var(--blue);*/
+  height: 80vh;
+  width: 80vh;
+  min-width: 80vh;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  cursor: grab;
+}
+
+.dot::before {
+  content: '.'; /* ou content: " "; */
+  background-color: var(--dot);
+
+  opacity: 0.2;
+
+  padding: var(--dot-size);
+  height: var(--dot-size);
+  width: var(--dot-size);
+
+  overflow: hidden;
+
+  position: absolute;
+  top:  calc((-1.5)* var(--dot-size));
+  left: calc((-1.5)* var(--dot-size));
+  z-index: 1;
+}
+
+.dot::after {
+  content: '.';
+  background-color: var(--dot);
+  height: var(--dot-size);
+  width: var(--dot-size);
+
+  overflow: hidden;
+
+  position: absolute;
+  top:  calc((-1/2)* var(--dot-size));
+  left: calc((-1/2)* var(--dot-size));
+  z-index: 1;
+}
+
+#svg {
+  width: 100%;
+  height: 100%;
+  stroke: #ffffff90;
+  stroke-width: 0.5px;
+  fill: #00000040;
+}
+
+#path:hover {
+  fill: #00000060;
+  stroke: #8eff93b2;
+}
+
+#line-svg{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#line-path{
+  stroke: #00ff4c;
+  stroke-width: 0.6px;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 4px;
+  margin-top: auto;
+  margin-bottom: 10vh;
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 4px;
+  background-color: #00000060;
+  color: #8eff93b2;
+  cursor: pointer;
+}
+
+.hidden-file-input {
+  display: none;
+}

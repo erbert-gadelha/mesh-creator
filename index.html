@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="images/banner-circle.png">
+
+        <script src="./script.js" defer></script>
+
+        <title>teste-mesh</title>
+    </head>
+
+    <body>
+
+        <div id="box">
+
+            <svg id="svg" viewBox="0 0 100 100" stroke="#000" stroke-width="0.5px" fill="#fff0" xmlns:xlink="http://www.w3.org/1999/xlink">
+             <path id="path" d=""/>
+            </svg>
+
+            <svg id="line-svg" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path id="line-path" d="M0 0z"/>
+            </svg>
+
+        </div>
+        <div id="options">
+            <label for="fileInput" class="btn load">load</label>
+            <input type="file" id="fileInput" class="hidden-file-input" accept=".svg">
+            <button id="btn-save" class="btn save">
+                save
+            </button>
+        </div>
+
+
+    </body>
+</html>
